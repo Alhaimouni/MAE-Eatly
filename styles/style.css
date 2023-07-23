@@ -16,11 +16,6 @@ html {
 body {
   font-family: "Jost", sans-serif;
   position: relative;
-  background-image: linear-gradient(
-    60deg,
-    rgb(227, 81, 222) 20%,
-    rgb(44, 44, 255) 80%
-  );
 }
 
 button {
@@ -57,6 +52,11 @@ button {
 .sec-one {
   height: 100vh;
   color: white;
+  background-image: linear-gradient(
+    60deg,
+    rgb(227, 81, 222) 20%,
+    rgb(44, 44, 255) 80%
+  );
 }
 
 .sec-one > .container {
@@ -157,10 +157,13 @@ button {
 /* Section Two Styles*/
 
 /* Section Three Styles*/
-
+.sec-three {
+  background-color: rgb(243, 242, 241);
+  color: rgb(88, 53, 247);
+}
 .sec-three .container {
   display: flex;
-  padding: 0 var(--section-padding);
+  padding: var(--section-padding) 0;
 }
 
 .sec-three .container .image {
@@ -169,13 +172,244 @@ button {
 
 .sec-three .container .data {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px dashed rgb(236, 26, 236); */
+  border-radius: 30px;
+  padding: 35px 18px;
+}
+
+.sec-three .container .data .one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.sec-three .container .data .one .title {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.sec-three .container .data .one .title p {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.sec-three .container .data .one > p {
+  font-size: 20px;
+}
+
+.sec-three .container .data .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.sec-three .container .data .grid > div {
+  border: 2px dashed rgb(227, 81, 222);
+  position: relative;
+  height: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+  width: 300px;
+}
+
+.sec-three .container .data .grid > div > div {
+  position: absolute;
+  border: 2px solid rgb(245, 245, 245);
+  transform: translate(15%, -90%);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 3px 1px 3px black;
+}
+
+.sec-three .container .data .grid > div.sec > div {
+  background-color: rgb(255, 213, 0);
+}
+
+.sec-three .container .data .grid > div h3 {
+}
+
+.sec-three .container .data .grid > div p {
+  font-weight: 500;
+  font-size: large;
 }
 
 /* Section Four Styles*/
 
+.sec-four {
+}
+
+.sec-four .container {
+  padding: var(--section-padding) 0;
+}
+
+.sec-four .container .card-s4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 95px;
+  background-color: blueviolet;
+  padding: 65px;
+  color: white;
+  border: 15px solid rgba(255, 206, 29, 0.79);
+}
+
+.sec-four .container .card-s4 .icon {
+  width: 80px;
+  height: 80px;
+  color: rgba(255, 168, 29, 0.96);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid wheat;
+}
+
+.sec-four .container .card-s4 > p:first-of-type {
+  font-weight: 900;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.sec-four .container .card-s4 > p:first-of-type span {
+  color: rgba(255, 168, 29, 0.96);
+}
+
+.sec-four .container .card-s4 > p:last-of-type {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.sec-four .container .card-s4 > button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 3px solid white;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgba(165, 125, 125, 0.307),
+    rgb(255, 149, 0) 60%,
+    rgba(165, 125, 125, 0.307)
+  );
+}
+
+.sec-four .container .card-s4 > button:hover {
+  background: linear-gradient(65deg, rgb(255, 149, 0), white);
+  color: rgb(255, 149, 0);
+}
+
 /* Section Five Styles*/
 
 /* Section Six Styles*/
+
+.sec-six {
+  background-color: rgb(243, 242, 241);
+  color: rgb(88, 53, 247);
+}
+
+.sec-six .container {
+  display: flex;
+  padding: var(--section-padding) 0;
+}
+
+.sec-six .container .image {
+  width: 40%;
+}
+
+.sec-six .container .data {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 35px 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-six .container .data .one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.sec-six .container .data .one .title {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-six .container .data .one .title p {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.sec-six .container .data .one > p {
+  font-size: 20px;
+}
+
+.sec-six .container .data .slider {
+  width: 500px;
+  height: 200px;
+  position: relative;
+}
+
+.sec-six .container .data .slider .controls {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.sec-six .container .data .slider .controls button {
+  border-radius: 50%;
+  border: 2px solid purple;
+  width: 30px;
+  height: 30px;
+  color: blue;
+  background-color: rgb(230, 171, 71);
+}
+
+.sec-six .container .data .slider .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid purple;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: blueviolet;
+  transition-duration: 0.5s;
+}
 
 /* Footer Styles*/
 footer {
@@ -206,8 +440,9 @@ footer > .container .about {
 footer > .container .about ul {
   list-style-type: none;
 }
+
 footer > .container .about ul:first-child {
-  margin-left: 30px;
+  margin-left: 80px;
 }
 
 footer > .container .about ul li:first-child {
@@ -218,7 +453,8 @@ footer > .container .about ul li:first-child {
 
 footer > .container .about ul li {
   padding: 0px 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 footer > .container .copy {
@@ -229,4 +465,8 @@ footer > .container .copy {
 
 footer > .container .copy p {
   margin: 10px;
+}
+
+footer > .container .copy p:last-child {
+  margin: 10px 150px 10px;
 }
