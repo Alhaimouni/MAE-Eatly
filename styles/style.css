@@ -1,0 +1,232 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --section-padding: 60px;
+  --main-duration: 0.5s;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  position: relative;
+  background-image: linear-gradient(
+    60deg,
+    rgb(227, 81, 222) 20%,
+    rgb(44, 44, 255) 80%
+  );
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Section One Styles*/
+
+.sec-one {
+  height: 100vh;
+  color: white;
+}
+
+.sec-one > .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sec-one > .container > header {
+  flex-basis: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sec-one > .container > header .logo {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sec-one > .container > header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sec-one > .container > header ul li {
+  margin: 10px;
+  padding: 5px;
+}
+
+.sec-one > .container > header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.sec-one > .container > header button {
+  padding: 10px 15px;
+  background-color: yellow;
+  border-radius: 5px;
+  border: 2px solid yellowgreen;
+}
+
+.sec-one > .container .welcoming {
+  height: calc(100vh - 100px);
+  max-height: 1000px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  padding: 0px var(--section-padding);
+}
+
+.sec-one > .container .welcoming .container {
+  color: white;
+  font-size: 50px;
+  margin: 0px;
+}
+
+.sec-one > .container .welcoming .container h3 {
+  color: white;
+  font-size: 50px;
+  line-height: 63px;
+}
+
+.sec-one > .container .welcoming .container h3 span {
+  color: rgb(255, 213, 0);
+}
+
+.sec-one > .container .welcoming .container p {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.sec-one > .container .welcoming .container button:first-of-type {
+  font-size: 16px;
+}
+
+.sec-one > .container .welcoming .container button:last-of-type {
+  font-size: 16px;
+}
+
+.sec-one > .container .welcoming .img {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  background-color: red;
+  right: 55px;
+  bottom: 55px;
+}
+
+/* Section Two Styles*/
+
+/* Section Three Styles*/
+
+.sec-three .container {
+  display: flex;
+  padding: 0 var(--section-padding);
+}
+
+.sec-three .container .image {
+  width: 40%;
+}
+
+.sec-three .container .data {
+  width: 60%;
+}
+
+/* Section Four Styles*/
+
+/* Section Five Styles*/
+
+/* Section Six Styles*/
+
+/* Footer Styles*/
+footer {
+  color: white;
+  background-image: linear-gradient(
+    60deg,
+    rgb(227, 81, 222) 20%,
+    rgb(44, 44, 255) 80%
+  );
+}
+
+footer > .container {
+  display: flex;
+  height: 250px;
+  flex-wrap: wrap;
+}
+
+footer > .container .eatly {
+  width: 25%;
+  padding: 15px;
+}
+
+footer > .container .about {
+  width: 75%;
+  display: flex;
+}
+
+footer > .container .about ul {
+  list-style-type: none;
+}
+footer > .container .about ul:first-child {
+  margin-left: 30px;
+}
+
+footer > .container .about ul li:first-child {
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+footer > .container .about ul li {
+  padding: 0px 5px;
+  margin-bottom: 5px;
+}
+
+footer > .container .copy {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+footer > .container .copy p {
+  margin: 10px;
+}
