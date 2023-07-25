@@ -271,6 +271,10 @@ button {
   align-items: center;
 }
 
+.sec-three .container .data .one .title i {
+  font-size: 40px;
+}
+
 .sec-three .container .data .one .title p {
   font-weight: 800;
   font-size: 30px;
@@ -301,6 +305,14 @@ button {
   width: 300px;
 }
 
+.sec-three .container .data .grid > div:hover {
+  box-shadow: 1px 1px 5px rgb(4, 0, 255);
+}
+
+.sec-three .container .data .grid > div:hover div {
+  background-color: gold;
+}
+
 .sec-three .container .data .grid > div > div {
   position: absolute;
   border: 2px solid rgb(245, 245, 245);
@@ -315,10 +327,6 @@ button {
   align-items: center;
   border-radius: 5px;
   box-shadow: 3px 1px 3px black;
-}
-
-.sec-three .container .data .grid > div.sec > div {
-  background-color: rgb(255, 213, 0);
 }
 
 .sec-three .container .data .grid > div p {
