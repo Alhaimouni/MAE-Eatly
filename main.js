@@ -1,5 +1,57 @@
 "use strict";
-const { log } = console;
+
+// section one word
+
+let word = document.querySelector("#c-title");
+let wordCount = 1;
+const values = ["Eating", "Lifestyle", "Sleeping"];
+setInterval(() => {
+  if (wordCount == 3) {
+    word.textContent = values[wordCount];
+    word.classList.add("ali");
+    wordCount = 0;
+  }
+  word.textContent = values[wordCount];
+  word.classList.add("ali");
+  wordCount++;
+}, 3000);
+
+//section five slider
+const [back5, next5] = document.querySelectorAll(".slide-5 .btns button");
+const pds = document.querySelectorAll(".slide-5 .pd");
+
+let head = 0;
+back5.disabled = true;
+
+next5.addEventListener("click", () => {
+  if (head > pds.length - 3) {
+    next5.disabled = true;
+    return;
+  }
+  back5.disabled = false;
+  pds[head].style.display = "none";
+  head++;
+});
+
+back5.addEventListener("click", () => {
+  if (head < 1) {
+    back5.disabled = true;
+    for (let i = 0; i < pds.length; i++) {
+      pds[i].style.display = "inline-block";
+    }
+    head = 0;
+    return;
+  }
+  next5.disabled = false;
+  for (let i = 0; i < pds.length; i++) {
+    pds[i].style.display = "none";
+  }
+  pds[head - 1].style.display = "inline-block";
+  pds[head].style.display = "inline-block";
+  head--;
+});
+
+//section six slider
 let currentCardIndex = 0;
 const totalCards = document.querySelectorAll(".card").length;
 
@@ -33,36 +85,3 @@ function swapCards(offset) {
 }
 
 showCard(currentCardIndex);
-
-//============================================================================================
-
-//section five slider
-
-const [back5, next5] = document.querySelectorAll(".slide-5 .btns button");
-const pds = document.querySelectorAll(".slide-5 .pd");
-
-let head = 0;
-
-next5.addEventListener("click", () => {
-  if (head > pds.length - 3) {
-    return;
-  }
-  pds[head].style.display = "none";
-  head++;
-});
-
-back5.addEventListener("click", () => {
-  if (head < 1) {
-    for (let i = 0; i < pds.length; i++) {
-      pds[i].style.display = "inline-block";
-    }
-    head = 0;
-    return;
-  }
-  for (let i = 0; i < pds.length; i++) {
-    pds[i].style.display = "none";
-  }
-  pds[head - 1].style.display = "inline-block";
-  pds[head].style.display = "inline-block";
-  head--;
-});

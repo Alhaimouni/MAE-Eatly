@@ -80,6 +80,12 @@ button {
   align-items: center;
 }
 
+.sec-one > .container > header .logo i {
+  color: gold;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
 .sec-one > .container > header ul {
   list-style-type: none;
   display: flex;
@@ -95,13 +101,39 @@ button {
 .sec-one > .container > header ul li a {
   text-decoration: none;
   color: white;
+  transition-duration: 0.3s;
+  position: relative;
+}
+
+.sec-one > .container > header ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background-color: gold;
+  width: 0%;
+  height: 2px;
+  transition-duration: 0.3s;
+}
+
+.sec-one > .container > header ul li a:hover {
+  color: gold;
+}
+
+.sec-one > .container > header ul li a:hover::before {
+  width: 100%;
 }
 
 .sec-one > .container > header button {
-  padding: 10px 15px;
-  background-color: yellow;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(255, 215, 0);
   border-radius: 5px;
-  border: 2px solid yellowgreen;
+  font-weight: bold;
+}
+
+.sec-one > .container > header button:hover {
+  background: linear-gradient(-45deg, gold, rgb(228, 228, 228));
 }
 
 .sec-one > .container .welcoming {
@@ -129,29 +161,66 @@ button {
 }
 
 .sec-one > .container .welcoming .container h3 span {
-  color: rgb(255, 213, 0);
+  color: rgb(255, 215, 0);
+  animation-name: x;
+  animation-duration: 3s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes x {
+  0% {
+  }
+  100% {
+    color: rgba(255, 0, 0, 0);
+  }
 }
 
 .sec-one > .container .welcoming .container p {
-  font-size: 16px;
+  font-size: 19px;
+  margin-top: -20px;
   line-height: 23px;
 }
 
-.sec-one > .container .welcoming .container button:first-of-type {
-  font-size: 16px;
+.sec-one > .container .welcoming .container button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(255, 215, 0);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.sec-one > .container .welcoming .container button:hover {
+  background: linear-gradient(-45deg, gold, rgb(228, 228, 228));
 }
 
 .sec-one > .container .welcoming .container button:last-of-type {
-  font-size: 16px;
+  border-radius: 50%;
 }
 
-.sec-one > .container .welcoming .img {
+.sec-one > .container .welcoming .img img {
   position: absolute;
-  width: 400px;
-  height: 450px;
-  background-color: red;
-  right: 55px;
-  bottom: 55px;
+  right: -175px;
+  bottom: 40px;
+  animation-name: img;
+  animation-duration: 4s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 600px;
+  height: 600px;
+}
+
+@keyframes img {
+  0% {
+  }
+  50% {
+    right: -175px;
+    bottom: 20px;
+  }
+  100% {
+  }
 }
 
 /* Section Two Styles*/
@@ -161,6 +230,7 @@ button {
   background-color: rgb(243, 242, 241);
   color: rgb(88, 53, 247);
 }
+
 .sec-three .container {
   display: flex;
   padding: var(--section-padding) 0;
@@ -168,6 +238,13 @@ button {
 
 .sec-three .container .image {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-three .container .image img {
+  height: 60%;
 }
 
 .sec-three .container .data {
@@ -193,6 +270,7 @@ button {
   justify-content: center;
   align-items: center;
 }
+
 .sec-three .container .data .one .title p {
   font-weight: 800;
   font-size: 30px;
@@ -243,18 +321,12 @@ button {
   background-color: rgb(255, 213, 0);
 }
 
-.sec-three .container .data .grid > div h3 {
-}
-
 .sec-three .container .data .grid > div p {
   font-weight: 500;
   font-size: large;
 }
 
 /* Section Four Styles*/
-
-.sec-four {
-}
 
 .sec-four .container {
   padding: var(--section-padding) 0;
@@ -332,15 +404,23 @@ button {
   max-height: 500px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  justify-content: space-between;
 }
 
 .sec-five .container .scrol-5 {
   display: flex;
   flex-flow: column;
-  width: 40%;
+  width: 45%;
 }
 
 .sec-five .container .scrol-5 .t {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  text-align: center;
+  color: rgb(88, 53, 247);
 }
 
 .sec-five .container .scrol-5 .t .title {
@@ -348,6 +428,7 @@ button {
   font-size: 20px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .sec-five .container .scrol-5 .t .title p {
@@ -363,10 +444,62 @@ button {
 
 .sec-five .container .scrol-5 .scrl {
   overflow: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.sec-five .container .scrol-5 .scrl::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sec-five .container .scrol-5 .scrl::-webkit-scrollbar-thumb {
+  background-color: rgb(98, 45, 148);
+  border-radius: 8px;
+}
+
+.sec-five .container .scrol-5 .scrl::-webkit-scrollbar-track {
+  background-image: linear-gradient(
+    60deg,
+    rgba(227, 81, 222, 0.664) 20%,
+    rgba(44, 44, 255, 0.553) 80%
+  );
+  border-radius: 8px;
+}
+
+.sec-five .container .scrol-5 .scrl p {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid;
+  padding: 15px;
+  font-weight: 600;
+  gap: 15px;
+  font-size: 18px;
+  border-radius: 25px;
+  color: rgb(98, 45, 148);
+  border-color: rgb(159, 159, 158);
+}
+
+.sec-five .container .scrol-5 .scrl p i {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(98, 45, 148);
+}
+
+.sec-five .container .scrol-5 .scrl p:hover i {
+  background: linear-gradient(-45deg, gold, rgb(228, 228, 228));
+  box-shadow: 1px 1px 6px black;
+}
+
+.sec-five .container .scrol-5 .scrl p:hover {
+  box-shadow: 1px 1px 6px black;
 }
 
 .sec-five .container .slide-5 {
-  background-color: red;
   width: 50%;
   min-height: 100%;
   position: relative;
@@ -376,18 +509,81 @@ button {
 
 .sec-five .container .slide-5 .btns {
   position: absolute;
-  right: 20px;
-  top: 10px;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+.sec-five .container .slide-5 .btns button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(251, 125, 247, 0.089);
+  background-color: rgba(251, 125, 247, 0.089);
+}
+
+.sec-five .container .slide-5 .btns button:hover {
+  border: 1px solid rgb(98, 45, 148);
 }
 
 .sec-five .container .slide-5 .pd {
   min-width: 50%;
   max-width: 50%;
-  height: 80%;
-  background-color: black;
-  border-left: 1px solid blue;
-  color: white;
-  transition-duration: 5s;
+  height: 100%;
+  position: relative;
+}
+
+.sec-five .container .slide-5 .pd .item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 350px;
+  border-top-right-radius: 125px;
+  border-top-left-radius: 125px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* background-color: rgba(251, 125, 247, 0.089); */
+  background-image: linear-gradient(
+    60deg,
+    rgba(215, 171, 214, 0.664) 20%,
+    rgba(167, 167, 247, 0.553) 80%
+  );
+
+  border: 2px solid rgb(255, 213, 0);
+  box-shadow: 1px 1px 5px black;
+}
+
+.sec-five .container .slide-5 .pd .item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60%;
+}
+
+.sec-five .container .slide-5 .pd .item p {
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(98, 45, 148);
+}
+
+.sec-five .container .slide-5 .pd .item button {
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.sec-five .container .slide-5 .pd .item button:hover {
+  background: linear-gradient(-45deg, gold, rgb(228, 228, 228));
 }
 
 /* Section Six Styles*/
@@ -403,7 +599,14 @@ button {
 }
 
 .sec-six .container .image {
-  width: 40%;
+  max-width: 40%;
+}
+
+.sec-six .container .image img {
+  width: 100%;
+  position: relative;
+  top: 60px;
+  filter: brightness(60%);
 }
 
 .sec-six .container .data {
@@ -457,11 +660,14 @@ button {
 
 .sec-six .container .data .slider .controls button {
   border-radius: 50%;
-  border: 2px solid purple;
+  border: 1px solid rgb(98, 45, 148);
   width: 30px;
   height: 30px;
-  color: blue;
-  background-color: rgb(230, 171, 71);
+  color: rgb(98, 45, 148);
+}
+
+.sec-six .container .data .slider .controls button:hover {
+  border: 2px solid rgb(98, 45, 148);
 }
 
 .sec-six .container .data .slider .card {
@@ -470,15 +676,15 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid purple;
+  border: 1px dashed purple;
   padding: 20px;
   border-radius: 10px;
   background-color: white;
-  color: blueviolet;
-  transition-duration: 0.5s;
+  color: rgb(98, 45, 148);
 }
 
 /* Footer Styles*/
+
 footer {
   color: white;
   background-image: linear-gradient(
