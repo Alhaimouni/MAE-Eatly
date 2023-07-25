@@ -323,10 +323,77 @@ button {
 
 /* Section Five Styles*/
 
+.sec-five {
+  background-color: rgb(243, 242, 241);
+}
+
+.sec-five .container {
+  display: flex;
+  max-height: 500px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.sec-five .container .scrol-5 {
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+}
+
+.sec-five .container .scrol-5 .t {
+}
+
+.sec-five .container .scrol-5 .t .title {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-five .container .scrol-5 .t .title p {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 25px;
+}
+
+.sec-five .container .scrol-5 .t > p {
+  font-size: 20px;
+}
+
+.sec-five .container .scrol-5 .scrl {
+  overflow: scroll;
+}
+
+.sec-five .container .slide-5 {
+  background-color: red;
+  width: 50%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.sec-five .container .slide-5 .btns {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.sec-five .container .slide-5 .pd {
+  min-width: 50%;
+  max-width: 50%;
+  height: 80%;
+  background-color: black;
+  border-left: 1px solid blue;
+  color: white;
+  transition-duration: 5s;
+}
+
 /* Section Six Styles*/
 
 .sec-six {
-  background-color: rgb(243, 242, 241);
+  /* background-color: rgb(243, 242, 241); */
   color: rgb(88, 53, 247);
 }
 
