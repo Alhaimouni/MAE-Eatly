@@ -16,6 +16,7 @@ html {
 body {
   font-family: "Jost", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 button {
@@ -63,6 +64,8 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .sec-one > .container > header {
@@ -191,6 +194,11 @@ button {
   font-weight: bold;
 }
 
+.sec-one > .container .welcoming .container button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .sec-one > .container .welcoming .container button:hover {
   background: linear-gradient(-45deg, gold, rgb(228, 228, 228));
 }
@@ -208,8 +216,8 @@ button {
   animation-play-state: running;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
 }
 
 @keyframes img {
@@ -225,7 +233,119 @@ button {
 
 /* Section Two Styles*/
 
+.sec-two .container {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+
+.sec-two .container .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec-two .container .head .title {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(88, 53, 247);
+}
+
+.sec-two .container .head .title i {
+  font-size: 35px;
+  font-weight: 700;
+  color: gold;
+  background-color: rgb(88, 53, 247);
+  padding: 10px;
+  border: 1px solid gold;
+  border-radius: 5px;
+}
+
+.sec-two .container .head .btns button {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 19px;
+  background-color: white;
+  color: rgb(88, 53, 247);
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 2px rgb(88, 53, 247);
+}
+
+.sec-two .container .head .btns button:hover {
+  border: 1px solid rgb(88, 53, 247);
+  box-shadow: 1px 1px 5px rgb(88, 53, 247);
+}
+
+.sec-two .container .body {
+  background-color: rgb(73, 73, 255);
+  margin: 50px 0;
+  border-radius: 60px;
+  min-height: 250px;
+  display: flex;
+  clip-path: inset(-34px -7px -9px -13px);
+}
+
+.sec-two .container .body .item {
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 25%;
+  text-align: center;
+  color: white;
+  transition-duration: 0.05s;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.sec-two .container .body .item:hover {
+  background-color: gold;
+  color: rgb(73, 73, 255);
+  box-shadow: 3px 3px 10px black;
+  border-radius: 15px;
+  transform: scale(1, 1.1);
+  transform-origin: bottom center;
+}
+
+.sec-two .container .body .item:hover span {
+  display: inline-block;
+}
+
+.sec-two .container .body .item > i {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.712);
+  background-color: blueviolet;
+  color: rgba(255, 215, 0);
+}
+
+.sec-two .container .body .item h3 {
+  margin-top: 15px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.sec-two .container .body .item p {
+  margin-top: 15px;
+}
+
+.sec-two .container .body .item span {
+  display: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.sec-two .container .body .item span:hover {
+  border-bottom: 1px solid blue;
+}
 /* Section Three Styles*/
+
 .sec-three {
   background-color: rgb(243, 242, 241);
   color: rgb(88, 53, 247);

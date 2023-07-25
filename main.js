@@ -1,6 +1,6 @@
 "use strict";
 
-// section one word
+// section one words
 
 let word = document.querySelector("#c-title");
 let wordCount = 1;
@@ -16,7 +16,31 @@ setInterval(() => {
   wordCount++;
 }, 3000);
 
+//section two slider
+
+const [back2, next2] = document.querySelectorAll(
+  ".sec-two .container .btns button"
+);
+
+let bdy2 = document.querySelector(".sec-two .container .body");
+let items2 = document.querySelectorAll(".sec-two .container .body .item");
+
+next2.addEventListener("click", () => {
+  bdy2.removeChild(items2[0]);
+  bdy2.appendChild(items2[0]);
+  items2 = document.querySelectorAll(".sec-two .container .body .item");
+  bdy2 = document.querySelector(".sec-two .container .body");
+});
+
+back2.addEventListener("click", () => {
+  items2 = document.querySelectorAll(".sec-two .container .body .item");
+  bdy2.removeChild(items2[items2.length - 1]);
+  bdy2.prepend(items2[items2.length - 1]);
+  bdy2 = document.querySelector(".sec-two .container .body");
+});
+
 //section five slider
+
 const [back5, next5] = document.querySelectorAll(".slide-5 .btns button");
 const pds = document.querySelectorAll(".slide-5 .pd");
 
