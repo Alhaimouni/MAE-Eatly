@@ -1,2 +1,2 @@
-# MAE-Eatly
+# mae-Eatly
 HTML, CSS and JAVASCRIPT design
