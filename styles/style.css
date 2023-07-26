@@ -74,6 +74,7 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 .sec-one > .container > header .logo {
@@ -81,6 +82,10 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.sec-one > .container > header > i {
+  display: none;
 }
 
 .sec-one > .container > header .logo i {
@@ -231,6 +236,71 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .sec-one > .container > header .logo {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .sec-one > .container > header ul {
+    display: none;
+  }
+  .sec-one > .container .welcoming .img img {
+    display: none;
+  }
+
+  .sec-one > .container > header > i {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .sec-one > .container > header > i:hover + nav ul {
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 86px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: white;
+    color: blue;
+    justify-content: center;
+    align-items: flex-start;
+    padding: inherit 0;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .sec-one > .container > header > i + nav ul li a {
+    color: blue;
+    font-weight: 500;
+  }
+
+  .sec-one > .container > header > i:hover + nav ul::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid white;
+    position: absolute;
+    right: 0;
+    top: -18px;
+    border-color: transparent;
+    border-bottom-color: white;
+  }
+
+  .sec-one > .container > header button {
+    display: none;
+  }
+
+  .sec-one > .container .welcoming {
+    text-align: center;
+  }
+}
+
 /* Section Two Styles*/
 
 .sec-two .container {
@@ -371,7 +441,6 @@ button {
   width: 60%;
   display: flex;
   flex-direction: column;
-  /* border: 2px dashed rgb(236, 26, 236); */
   border-radius: 30px;
   padding: 35px 18px;
 }
@@ -452,6 +521,19 @@ button {
 .sec-three .container .data .grid > div p {
   font-weight: 500;
   font-size: large;
+}
+
+@media (max-width: 768px) {
+  .sec-three .container .image {
+    display: none;
+  }
+  .sec-three .container .data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 35px 18px;
+  }
 }
 
 /* Section Four Styles*/
@@ -679,7 +761,6 @@ button {
   padding: 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  /* background-color: rgba(251, 125, 247, 0.089); */
   background-image: linear-gradient(
     60deg,
     rgba(215, 171, 214, 0.664) 20%,
@@ -717,7 +798,6 @@ button {
 /* Section Six Styles*/
 
 .sec-six {
-  /* background-color: rgb(243, 242, 241); */
   color: rgb(88, 53, 247);
 }
 
